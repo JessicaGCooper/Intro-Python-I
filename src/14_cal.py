@@ -30,3 +30,6 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+user_imput = input("Please enter the desired month and year as numbers separated by a space:")
+user_imput = 
