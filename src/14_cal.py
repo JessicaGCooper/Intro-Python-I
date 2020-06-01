@@ -30,32 +30,24 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
-args = sys.argv
 
+if len(sys.argv) == 1:
+  year = datetime.now().year
+  month = datetime.now().month
+elif len(sys.argv) == 2:
+  if int(sys.argv[1]) in range(1, 13):
+    year = datetime.now().year
+    month = int(sys.argv[1])
+    print(calendar.month(year, month))
+  else:
+    print("If a month or year is input they must be in integer form in order of year then month the proper range . If only one integer is entered it will assumed to be the month.  If no input is entered the program will return the current date and year.")
+elif len(sys.argv) == 3:
+  if int(sys.argv[1]) in range(1900, 3000) and int(sys.argv[2]) in range(1, 13): 
+    year = int(sys.argv[1])
+    month = int(sys.argv[2])
+    print(calendar.month(year, month))
+  else:
+    print("If a month or year is input they must be in integer form in order of year then month the proper range. If only one integer is entered it will assumed to be the month.  If no input is entered the program will return the current date and year.")
+elif len(sys.argv) > 3:
+  print("You have entered too many arguments.")
 
-month = datetime.now().month
-year = datetime.now().year
- # 1 arg should set the month
-if len(args) == 1:
-    pass
-elif len(args) == 2:
-    month = int(args[1])
-    # print error message if not 1-12
-# 2 args should set the month and year
-elif len(args) == 3:
-    month = int(args[1])
-    year = int(args[2])
-# Otherwise, print error and usage message
-else:
-    print("ERROR: Should be in format '14_cal.py [month] [year]'")
-    exit(0)
-
-if month < 1 or month > 12:
-    print("ERROR: Invalid month")
-    exit(0)
-
-
-tc = calendar.TextCalendar()
-
-# Print calendar for given month and year
-tc.prmonth(year, month)

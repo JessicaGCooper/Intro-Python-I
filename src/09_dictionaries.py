@@ -35,6 +35,8 @@ waypoints = [
 
 # Add a new waypoint to the list
 # YOUR CODE HERE
+
+
 new_waypoint = { "lat": 35, "lon": -123, "name": "a fourth place"}
 waypoints.append(new_waypoint)
 
@@ -44,17 +46,12 @@ waypoints.append(new_waypoint)
 # waypoints list.
 
 # YOUR CODE HERE
-# name1 = { "name": "not a real place"}
-# lon1 = { "lon": -130 }
 
-# waypoints[0].update(lon1)
-# waypoints[0].update(name1)
-
-waypoints[0]["name"] = "not a real place"
 waypoints[0]["lon"] = -130
+waypoints[0]["name"] = "not a real place"
 
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
+for item in waypoints:
+    print(item.values())
 
-for i in range(0, len(waypoints)):
-  print(waypoints[i].values())

@@ -16,6 +16,7 @@ print(str(sys.argv))
 
 # Print out the OS platform you're using:
 # YOUR CODE HERE
+print(sys.platform)
 
 print(sys.platform)
 
@@ -24,17 +25,18 @@ print(sys.platform)
 
 print(sys.version)
 
-
 import os
 # See the docs for the OS module: https://docs.python.org/3.7/library/os.html
 
 # Print the current process ID
 # YOUR CODE HERE
+print(os.getpid())
 
 print(os.getpid())
 
 # Print the current working directory (cwd):
 # YOUR CODE HERE
+print(os.getcwd())
 
 print(os.getcwd())
 

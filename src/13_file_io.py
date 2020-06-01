@@ -10,10 +10,9 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
-f = open('src/foo.txt', 'r')
-if f.mode == 'r':
-  contents = f.read()
-print(contents)
+
+f = open('foo.txt', 'r')
+print(f.read())
 f.close()
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
@@ -25,7 +24,9 @@ f.close()
 new_file = open('src/bar.txt', 'w+')
 new_file.write("Carry on my girl.\nMake off with the pie.\nCrows are precious.")
 new_file.close()
+
 created_file = open('src/bar.txt', 'r')
 if created_file.mode == 'r':
     print(created_file.read())
 created_file.close()
+

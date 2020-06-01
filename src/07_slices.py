@@ -21,6 +21,7 @@ print(a[4:5])
 print(a[3:])
 
 # Output the two middle elements in the array: [1, 7]
+
 print(a[2:4])
 
 # Output every element except the first one: [4, 1, 7, 9, 6]
