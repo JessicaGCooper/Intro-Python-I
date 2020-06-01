@@ -31,7 +31,6 @@ import sys
 import calendar
 from datetime import datetime
 
-
 if len(sys.argv) == 1:
   year = datetime.now().year
   month = datetime.now().month
@@ -51,9 +50,4 @@ elif len(sys.argv) == 3:
     print("If a month or year is input they must be in integer form in order of year then month the proper range. If only one integer is entered it will assumed to be the month.  If no input is entered the program will return the current date and year.")
 elif len(sys.argv) > 3:
   print("You have entered too many arguments.")
-
-
-
-
-
 
